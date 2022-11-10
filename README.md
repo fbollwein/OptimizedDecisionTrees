@@ -2,7 +2,7 @@
 This repository contains an advanced library to induce decision trees. It is capable of constructing (bivariate) oblique decision trees and cross-split decision trees. Furthermore, it handles nominal attributes naturally without treating them as numeric variables.
 The Code is written in C++, yet it is intended to be used with Python. SWIG is used to build the extension module.
 
-Note that this code has been developed as part of my PhD project and should merely be regarded as a prototype implementation that I never intended to publish. Not all features have been thoroughly tested and the code certainly contains many bugs that you are likely to encounter. Nonetheless, I still decided to publish it as I am convinced that someone out there might find it helpful. Have fun!
+Note that this code has been developed as part of my PhD project and should merely be regarded as a prototype implementation that I never intended to publish. Not all features have been thoroughly tested and the code certainly contains many bugs that you are likely to encounter. Nonetheless, I still decided to publish the code as I am convinced that someone out there might find it helpful. Have fun!
 
 ## Building for Linux
 ### Dependencies

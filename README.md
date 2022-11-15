@@ -163,10 +163,10 @@ Default: 0.2
 * **cross_entropy_rho**: (0, 1)
 Specifices the quantil parameter rho of the cross-entropy method.  
 Default: 0.1
-* **a_start_iterations**: int or str
+* **sa_start_iterations**: int or str
 Specifices the number of start iterations of the simulated annealing method to calculate the initial temperature. Can either be an integer or a string specifying a formula that depends on the number of observations "n" at the respective node and the number of numerical features "d".  
 Default: 100
-* **a_no_improvement**: int or str
+* **sa_no_improvement**: int or str
 Specifices the maximum number of iterations of the simulated annealing method without improvement of the optimal solution. Can either be an integer or a string specifying a formula that depends on the number of observations "n" at the respective node and the number of numerical features "d".  
 Default: "max(d,100)"
 * **sa_beta**: (0, 1)

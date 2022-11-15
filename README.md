@@ -172,7 +172,7 @@ Default: "max(d,100)"
 * **sa_beta**: (0, 1)
 Specifices the beta parameter for the geometric cooling schedule of the simulated annealing method.  
 Default: 0.85
-* **sa_scale**: {no,geom,equ}
+* **sa_scale**: {"no","geom","equ"}
 Specifices whether advanced scaling of the input matrix should be carried out for the simulated annealing method. One can choose between no schaling, geometric mean scaling or equilibration
 Default: geom
 * **sa_max_eta**: int

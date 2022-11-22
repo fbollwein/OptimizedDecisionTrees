@@ -84,14 +84,14 @@ LINEARLIBS= $(LIBLINEAR_DIR)/blas/blas.a
 .PHONY: directories all clean
  
 $(SO): $(OBJECTS) $(SWIG) $(LIBLINEAR) $(LIBNEWTON) $(LINEARLIBS)
-	$(CC) $(LTO) -shared $(OBJECTS) $(LIBLINEAR) $(LIBNEWTON) $(SWIG) -o lib/_$(TREE).so $(INCLUDE) $(GUROBI_LIB) $(CLPLIB) -lm $(LINEARLIBS)
+	$(CC) $(LTO) -shared $(OBJECTS) $(LIBLINEAR) $(LIBNEWTON) $(SWIG) -o lib/_$(TREE).so $(GUROBI_LIB) $(CLPLIB) -lm $(LINEARLIBS)
 
 $(SWIG):
 	$(SWIGV) -c++ -python -outdir lib -o src/$(TREE)_wrap.cxx swig/$(TREE).i
 	$(CC) $(CC_FLAGS) $(LTO) src/$(TREE)_wrap.cxx -o $(SWIG) $(PY_CFLAGS) $(INCLUDE) $(SWIGINCLUDE)
 
 $(BUILD_DIR)/%.o: src/%.cpp $(LIBLINEAR) $(LIBNEWTON) $(LINEARLIBS) | directories
-	$(CC) $(CC_FLAGS) $(LTO) $(INCLUDE) $< -o $@ $(CLPLIB) $(GUROBI_LIB) $(USEGUROBI)
+	$(CC) $(CC_FLAGS) $(LTO) $(INCLUDE) $< -o $@ $(USEGUROBI)
 
 $(LIBLINEAR) $(LIBNEWTON) $(LINEARLIBS):
 	make -C $(LIBLINEAR_DIR)

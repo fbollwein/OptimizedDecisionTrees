@@ -28,32 +28,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 #include "PointValuePair.h"
 #include "Result.h"
 #include "Environment.h"
-#include <ctime>
 using namespace std;
 std::mutex mtx;
-class CompareNodes
-{
-public:
-	bool operator()(BBNode a, BBNode b)
-	{
-		return a.LB < b.LB;
-	}
-};
-struct keyValue
-{
-	int key;
-	void *value;
-};
-struct Data
-{
-	double *X;
-	int *Y;
-	int *P;
-	double D_x;
-	double D_y;
-	double d_x;
-	double d_y;
-};
+
 bool verify(int total_points, bool regression, double *X, double X2[], double X1[], int **dataX1, int **dataX2, double **dataX1_reg, double **dataX2_reg, double a, double b, double d_x, double d_y, double D_x, double D_y)
 {
 	bool above = false;

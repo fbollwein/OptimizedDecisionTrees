@@ -122,7 +122,7 @@ void DecisionTree::setParam(string param, string value)
 	}
 	else
 	{
-		cout << "Parameter \"" << param << "\" unknown!\n";
+		cout << "String parameter \"" << param << "\" unknown!\n";
 	}
 }
 void DecisionTree::setParam(string param, double value)
@@ -400,7 +400,7 @@ void DecisionTree::setParam(string param, double value)
 	}
 	else
 	{
-		cout << "Parameter \"" << param << "\" unknown!\n";
+		cout << "Numerical parameter \"" << param << "\" unknown!\n";
 	}
 }
 DecisionTree::DecisionTree()

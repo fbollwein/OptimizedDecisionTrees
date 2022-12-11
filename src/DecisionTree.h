@@ -89,7 +89,6 @@ public:
 	double getError(int id);
 	double getSubTreeError(int id, bool collect, bool eval);
 	int getDepth();
-	string export_graph();
 	string save();
 	void save(string filename,int mode);
 	void save(string filename,bool overwrite);

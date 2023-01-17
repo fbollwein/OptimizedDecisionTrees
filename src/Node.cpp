@@ -1021,7 +1021,7 @@ vector<Node *> Node::divide(Rule rule)
   }
   else if (rule.is_nominal)
   {
-    bool reduce_domain = false;
+    bool reduce_domain = true;
     for (int l = 0; l < rule.no_children; l++)
     {
       vector<vector<bool>> is_nominal_val_in_dataset2;
@@ -1043,7 +1043,10 @@ vector<Node *> Node::divide(Rule rule)
         if (rule.which_partition[k] == l)
         {
           in_partition.push_back(true);
-          is_nominal_val_in_dataset2[rule.nominal_ind][k] = true;
+          if(is_nominal_val_in_dataset[rule.nominal_ind][k])
+          {
+            is_nominal_val_in_dataset2[rule.nominal_ind][k] = true;
+          }
         }
         else
         {
@@ -1058,7 +1061,7 @@ vector<Node *> Node::divide(Rule rule)
         }
       }
       Node *node = new Node(X, Xnominal, Y, Y_reg, data[l], data_reg[l], total_pointsS[l], total_numeric_features, total_nominal_features, nominal_domain, is_nominal_val_in_dataset2, n_classes, p, env);
-      node->cond = Condition(rule.nominal_ind, in_partition, is_nominal_val_in_dataset);
+      node->cond = Condition(rule.nominal_ind, in_partition, is_nominal_val_in_dataset2);
       node->hasData = true;
       node->possesses_data = true;
       nodes.push_back(node);

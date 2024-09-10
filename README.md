@@ -183,5 +183,5 @@ Default: 100
 * [A branch & bound algorithm to determine optimal cross-splits for decision tree induction](https://doi.org/10.1007/s10472-019-09684-0)
 * [A branch & bound algorithm to determine optimal bivariate splits for oblique decision tree induction](https://doi.org/10.1007/s10489-021-02281-x)
 * [Oblique decision tree induction by cross-entropy optimization based on the von Mises–Fisher distribution](https://doi.org/10.1007/s00180-022-01195-7)
-* A pivot-based simulated annealing algorithm to determine oblique splits for
-decision tree induction (Under review)
+* [A pivot-based simulated annealing algorithm to determine oblique splits for decision tree induction](https://doi.org/10.1007/s00180-022-01317-1)
+* [Optimization algorithms for decision tree induction](https://dokumente.ub.tu-clausthal.de/servlets/MCRFileNodeServlet/clausthal_derivate_00001942/Db%20115368.pdf)
